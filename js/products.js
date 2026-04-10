@@ -9,7 +9,7 @@ const PRODUCTS = [
     category: "Accessories",
     featured: true,
     badge: "Bestseller",
-    image: "https://images.unsplash.com/photo-1560243563-062bfc001d68?w=400",
+    image: "https://images.unsplash.com/photo-1544816155-12df9643f363?w=400",
     rating: 4.5,
     reviews: 2451,
     description: "Durable natural linen tote with reinforced handles."
