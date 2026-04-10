@@ -1,4 +1,4 @@
-# Nova — Modern E-commerce Shop
+# Prerna Store — Modern E-commerce Shop
 
 A modern, responsive e-commerce shop built with vanilla HTML, CSS, and JavaScript.
 

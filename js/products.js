@@ -9,7 +9,7 @@ const PRODUCTS = [
     featured: true,
     badge: "Bestseller",
     icon: "👜",
-    gradient: "linear-gradient(135deg,#fbd38d,#f6ad55)",
+    gradient: "linear-gradient(135deg,#b278c6,#6C3483)",
     description: "Durable natural linen tote with reinforced handles."
   },
   {
@@ -20,7 +20,7 @@ const PRODUCTS = [
     featured: true,
     badge: "New",
     icon: "☕",
-    gradient: "linear-gradient(135deg,#c3dafe,#7f9cf5)",
+    gradient: "linear-gradient(135deg,#fff3a8,#F4D03F)",
     description: "Hand-thrown stoneware mug with a matte glaze finish."
   },
   {
@@ -31,7 +31,7 @@ const PRODUCTS = [
     featured: true,
     badge: "Limited",
     icon: "💡",
-    gradient: "linear-gradient(135deg,#fed7d7,#fc8181)",
+    gradient: "linear-gradient(135deg,#F4D03F,#6C3483)",
     description: "Warm dimmable LED lamp with a brushed brass arm."
   },
   {
