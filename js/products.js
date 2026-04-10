@@ -1,4 +1,4 @@
-// Product catalog. Images are loaded from Unsplash source API.
+// Product catalog. Images loaded from specific Unsplash CDN URLs.
 // Prices in INR. EMI and discount are derived in app.js.
 const PRODUCTS = [
   {
@@ -9,7 +9,7 @@ const PRODUCTS = [
     category: "Accessories",
     featured: true,
     badge: "Bestseller",
-    image: "https://source.unsplash.com/600x600/?tote,bag",
+    image: "https://images.unsplash.com/photo-1591195853828-11db59a44f43?w=400",
     rating: 4.5,
     reviews: 2451,
     description: "Durable natural linen tote with reinforced handles."
@@ -22,7 +22,7 @@ const PRODUCTS = [
     category: "Home & Living",
     featured: true,
     badge: "New",
-    image: "https://source.unsplash.com/600x600/?ceramic-mug,coffee",
+    image: "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=400",
     rating: 4.3,
     reviews: 1287,
     description: "Hand-thrown stoneware mug with a matte glaze finish."
@@ -35,113 +35,92 @@ const PRODUCTS = [
     category: "Home & Living",
     featured: true,
     badge: "Limited",
-    image: "https://source.unsplash.com/600x600/?desk-lamp,lamp",
+    image: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=400",
     rating: 4.6,
     reviews: 892,
     description: "Warm dimmable LED lamp with a brushed brass arm."
   },
   {
     id: 4,
-    name: "Leather Journal",
-    price: 2999,
-    originalPrice: 3999,
-    category: "Stationery",
+    name: "Wireless Headphones",
+    price: 5999,
+    originalPrice: 8999,
+    category: "Electronics",
     featured: true,
-    image: "https://source.unsplash.com/600x600/?leather,notebook",
-    rating: 4.4,
-    reviews: 3214,
-    description: "Full-grain leather notebook, 240 pages, lay-flat binding."
+    badge: "Bestseller",
+    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400",
+    rating: 4.7,
+    reviews: 5823,
+    description: "Over-ear wireless headphones with noise cancellation."
   },
   {
     id: 5,
-    name: "Wool Throw Blanket",
-    price: 9999,
-    originalPrice: 12999,
-    category: "Home & Living",
+    name: "Leather Wallet",
+    price: 2499,
+    originalPrice: 3499,
+    category: "Accessories",
     featured: true,
-    badge: "Cozy",
-    image: "https://source.unsplash.com/600x600/?wool,blanket",
-    rating: 4.7,
-    reviews: 1562,
-    description: "Ethically sourced merino wool throw, 50\" × 60\"."
+    image: "https://images.unsplash.com/photo-1627123424574-724758594e93?w=400",
+    rating: 4.4,
+    reviews: 1823,
+    description: "Genuine full-grain leather bifold wallet with RFID protection."
   },
   {
     id: 6,
-    name: "Minimalist Watch",
-    price: 13499,
-    originalPrice: 17999,
-    category: "Accessories",
+    name: "Scented Candle",
+    price: 1299,
+    originalPrice: 1799,
+    category: "Home & Living",
     featured: true,
-    image: "https://source.unsplash.com/600x600/?minimalist,watch",
-    rating: 4.8,
-    reviews: 4198,
-    description: "Swiss movement, sapphire crystal, Italian leather strap."
-  },
-  {
-    id: 7,
-    name: "Scented Soy Candle",
-    price: 2299,
-    originalPrice: 2999,
-    category: "Wellness",
-    image: "https://source.unsplash.com/600x600/?scented,candle",
+    image: "https://images.unsplash.com/photo-1602607144056-8ab23a5e7046?w=400",
     rating: 4.2,
     reviews: 768,
     description: "Soy wax candle with notes of cedarwood and vanilla."
   },
   {
-    id: 8,
-    name: "Fountain Pen Set",
-    price: 3799,
-    originalPrice: 4999,
-    category: "Stationery",
-    image: "https://source.unsplash.com/600x600/?fountain-pen,ink",
-    rating: 4.5,
-    reviews: 534,
-    description: "Precision-tipped fountain pen with refillable ink cartridges."
-  },
-  {
-    id: 9,
-    name: "Ceramic Planter",
-    price: 2699,
-    originalPrice: 3499,
-    category: "Home & Living",
-    image: "https://source.unsplash.com/600x600/?planter,pot",
-    rating: 4.3,
-    reviews: 1029,
-    description: "Hand-glazed planter with built-in drainage tray."
-  },
-  {
-    id: 10,
-    name: "Premium Yoga Mat",
-    price: 5499,
-    originalPrice: 6999,
+    id: 7,
+    name: "Water Bottle",
+    price: 899,
+    originalPrice: 1299,
     category: "Wellness",
     badge: "Eco",
-    image: "https://source.unsplash.com/600x600/?yoga-mat,yoga",
+    image: "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=400",
+    rating: 4.5,
+    reviews: 3129,
+    description: "Insulated stainless steel bottle. Keeps drinks cold 24h."
+  },
+  {
+    id: 8,
+    name: "Yoga Mat",
+    price: 1999,
+    originalPrice: 2999,
+    category: "Wellness",
+    image: "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=400",
     rating: 4.6,
     reviews: 2876,
     description: "Natural rubber mat with a non-slip textured surface."
   },
   {
-    id: 11,
-    name: "Canvas Backpack",
-    price: 7999,
-    originalPrice: 9999,
+    id: 9,
+    name: "Sunglasses",
+    price: 2799,
+    originalPrice: 3999,
     category: "Accessories",
-    image: "https://source.unsplash.com/600x600/?canvas,backpack",
+    badge: "New",
+    image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400",
     rating: 4.4,
-    reviews: 1843,
-    description: "Waxed canvas backpack with padded laptop sleeve."
+    reviews: 1562,
+    description: "UV400 polarized sunglasses with lightweight metal frame."
   },
   {
-    id: 12,
-    name: "Essential Oil Set",
-    price: 4299,
-    originalPrice: 5499,
-    category: "Wellness",
-    image: "https://source.unsplash.com/600x600/?essential-oil,aromatherapy",
-    rating: 4.5,
+    id: 10,
+    name: "Phone Stand",
+    price: 799,
+    originalPrice: 1199,
+    category: "Electronics",
+    image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400",
+    rating: 4.3,
     reviews: 967,
-    description: "Six pure essential oils for relaxation and focus."
+    description: "Adjustable aluminum desk stand for phones and small tablets."
   }
 ];
