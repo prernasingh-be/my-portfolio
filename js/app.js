@@ -65,27 +65,42 @@ function cartItemCount() {
 
 // ===== Rendering =====
 function formatPrice(n) {
-  return "$" + n.toFixed(2);
+  return "₹" + Math.round(n).toLocaleString('en-IN');
 }
 
 function productCardHTML(p) {
+  const discount = p.originalPrice ? Math.round((1 - p.price / p.originalPrice) * 100) : 0;
+  const emi = Math.max(1, Math.round(p.price / 12));
   const badge = p.badge ? `<span class="product-badge">${p.badge}</span>` : "";
+  const discountBadge = discount > 0 ? `<span class="discount-badge">-${discount}%</span>` : "";
+  const oldPrice = p.originalPrice ? `<span class="old-price">${formatPrice(p.originalPrice)}</span>` : "";
+  const discountText = discount > 0 ? `<span class="discount-text">${discount}% OFF</span>` : "";
+  const fallback = `https://picsum.photos/seed/prerna-${p.id}/600/600`;
   return `
     <article class="product-card" data-id="${p.id}">
-      <div class="product-img" style="background: ${p.gradient};">
+      <div class="product-img">
+        <img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.onerror=null;this.src='${fallback}';" />
         ${badge}
-        <span class="product-icon" aria-hidden="true">${p.icon}</span>
+        ${discountBadge}
       </div>
       <div class="product-info">
         <span class="product-cat">${p.category}</span>
         <h3 class="product-name">${p.name}</h3>
-        <p class="product-desc">${p.description}</p>
-        <div class="product-foot">
-          <span class="product-price">${formatPrice(p.price)}</span>
-          <button class="btn btn-primary small add-btn" data-id="${p.id}">
-            Add to Cart
-          </button>
+        <div class="product-rating">
+          <span class="stars">${p.rating.toFixed(1)} ★</span>
+          <span class="reviews">(${p.reviews.toLocaleString('en-IN')} reviews)</span>
         </div>
+        <div class="price-row">
+          <span class="product-price">${formatPrice(p.price)}</span>
+          ${oldPrice}
+          ${discountText}
+        </div>
+        <div class="emi">EMI from ${formatPrice(emi)}/month</div>
+        <div class="sold-by">Sold by: <strong>Prerna Store</strong></div>
+        <div class="cod-badge">✓ Cash on Delivery Available</div>
+        <button class="btn btn-primary small full add-btn" data-id="${p.id}">
+          Add to Cart
+        </button>
       </div>
     </article>
   `;
@@ -140,17 +155,18 @@ function renderCart() {
   body.innerHTML = cart.map(item => {
     const p = findProduct(item.id);
     if (!p) return "";
+    const fallback = `https://picsum.photos/seed/prerna-${p.id}/200/200`;
     return `
       <div class="cart-item" data-id="${p.id}">
-        <div class="ci-img" style="background: ${p.gradient};">
-          <span>${p.icon}</span>
+        <div class="ci-img">
+          <img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.onerror=null;this.src='${fallback}';" />
         </div>
         <div class="ci-info">
           <div class="ci-top">
             <strong>${p.name}</strong>
             <button class="ci-remove" data-remove="${p.id}" aria-label="Remove">×</button>
           </div>
-          <span class="ci-cat">${p.category}</span>
+          <span class="ci-cat">Sold by: Prerna Store</span>
           <div class="ci-bot">
             <div class="qty">
               <button data-dec="${p.id}">−</button>
