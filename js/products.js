@@ -9,7 +9,7 @@ const PRODUCTS = [
     category: "Accessories",
     featured: true,
     badge: "Bestseller",
-    image: "https://images.unsplash.com/photo-1591195853828-11db59a44f43?w=400",
+    image: "https://images.unsplash.com/photo-1560243563-062bfc001d68?w=400",
     rating: 4.5,
     reviews: 2451,
     description: "Durable natural linen tote with reinforced handles."
@@ -72,7 +72,7 @@ const PRODUCTS = [
     originalPrice: 1799,
     category: "Home & Living",
     featured: true,
-    image: "https://images.unsplash.com/photo-1602607144056-8ab23a5e7046?w=400",
+    image: "https://images.unsplash.com/photo-1603006905003-be475563bc59?w=400",
     rating: 4.2,
     reviews: 768,
     description: "Soy wax candle with notes of cedarwood and vanilla."
