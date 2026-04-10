@@ -3,19 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nova — Modern Shop</title>
-  <meta name="description" content="Nova is a modern online shop for elevated everyday essentials." />
+  <title>Prerna Store — Modern Shop</title>
+  <meta name="description" content="Prerna Store is a modern online shop for elevated everyday essentials." />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <!-- Announcement bar -->
+  <div class="announcement-bar">
+    <div class="container">
+      <span class="flag">🇮🇳</span> Free Delivery Above ₹499
+      <span class="sep">|</span> Cash on Delivery Available
+      <span class="sep">|</span> Easy Returns
+    </div>
+  </div>
+
   <!-- Navigation -->
   <header class="navbar">
     <div class="container nav-inner">
       <a href="index.html" class="logo">
-        <span class="logo-mark">◆</span> Nova
+        <span class="logo-mark">◆</span> Prerna Store
       </a>
       <nav class="nav-links" id="navLinks">
         <a href="index.html" class="active">Home</a>
@@ -49,7 +58,7 @@
       <div class="hero-copy">
         <span class="eyebrow">New Spring Collection</span>
         <h1>Elevated essentials<br/>for everyday life.</h1>
-        <p>Discover thoughtfully designed products crafted with premium materials. Free shipping on orders over $75.</p>
+        <p>Discover thoughtfully designed products crafted with premium materials. Free delivery on orders above ₹499.</p>
         <div class="hero-cta">
           <a href="shop.html" class="btn btn-primary">Shop Now</a>
           <a href="#featured" class="btn btn-ghost">Explore Featured →</a>
@@ -63,15 +72,15 @@
       <div class="hero-art" aria-hidden="true">
         <div class="blob"></div>
         <div class="hero-card card-1">
-          <div class="hc-img" style="background-image: linear-gradient(135deg,#fbd38d,#f6ad55);"></div>
+          <div class="hc-img" style="background-image: url('https://source.unsplash.com/400x400/?tote,bag'); background-size: cover; background-position: center;"></div>
           <div class="hc-text"><span>Bestseller</span><strong>Linen Tote</strong></div>
         </div>
         <div class="hero-card card-2">
-          <div class="hc-img" style="background-image: linear-gradient(135deg,#c3dafe,#7f9cf5);"></div>
+          <div class="hc-img" style="background-image: url('https://source.unsplash.com/400x400/?ceramic-mug,coffee'); background-size: cover; background-position: center;"></div>
           <div class="hc-text"><span>New</span><strong>Ceramic Mug</strong></div>
         </div>
         <div class="hero-card card-3">
-          <div class="hc-img" style="background-image: linear-gradient(135deg,#fed7d7,#fc8181);"></div>
+          <div class="hc-img" style="background-image: url('https://source.unsplash.com/400x400/?desk-lamp,lamp'); background-size: cover; background-position: center;"></div>
           <div class="hc-text"><span>Limited</span><strong>Desk Lamp</strong></div>
         </div>
       </div>
@@ -107,8 +116,8 @@
     <div class="container promo-inner">
       <div>
         <span class="eyebrow light">Limited Offer</span>
-        <h2>Get 15% off your first order</h2>
-        <p>Join the Nova newsletter for exclusive drops, early access and a welcome gift.</p>
+        <h2>Flat ₹500 off on your first order</h2>
+        <p>Join the Prerna Store newsletter for exclusive drops, early access and a welcome gift. Minimum order ₹1,499.</p>
       </div>
       <form class="newsletter" onsubmit="event.preventDefault(); this.querySelector('input').value=''; alert('Thanks for subscribing!');">
         <input type="email" placeholder="Enter your email" required />
@@ -122,23 +131,23 @@
     <div class="container features">
       <div class="feature">
         <div class="feat-ico">🚚</div>
-        <h3>Free Shipping</h3>
-        <p>On all orders over $75 — delivered to your door.</p>
+        <h3>Free Delivery Above ₹499</h3>
+        <p>Fast, free shipping across India on all qualifying orders.</p>
+      </div>
+      <div class="feature">
+        <div class="feat-ico">💵</div>
+        <h3>Cash on Delivery</h3>
+        <p>Pay when your order arrives at your doorstep.</p>
       </div>
       <div class="feature">
         <div class="feat-ico">↩️</div>
-        <h3>Easy Returns</h3>
-        <p>30-day hassle-free returns on every item.</p>
+        <h3>Easy 7-Day Returns</h3>
+        <p>Changed your mind? Return it hassle-free within 7 days.</p>
       </div>
       <div class="feature">
         <div class="feat-ico">🔒</div>
-        <h3>Secure Checkout</h3>
-        <p>Your data is protected with end-to-end encryption.</p>
-      </div>
-      <div class="feature">
-        <div class="feat-ico">💬</div>
-        <h3>24/7 Support</h3>
-        <p>Real humans ready to help whenever you need.</p>
+        <h3>100% Secure Payments</h3>
+        <p>UPI, Cards, Net Banking & Wallets — all protected.</p>
       </div>
     </div>
   </section>
@@ -147,7 +156,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="foot-brand">
-        <a href="index.html" class="logo"><span class="logo-mark">◆</span> Nova</a>
+        <a href="index.html" class="logo"><span class="logo-mark">◆</span> Prerna Store</a>
         <p>Elevated essentials for everyday life. Designed with care, built to last.</p>
       </div>
       <div class="foot-col">
@@ -180,7 +189,7 @@
       </div>
     </div>
     <div class="container foot-bottom">
-      <span>© 2026 Nova Shop. All rights reserved.</span>
+      <span>© 2026 Prerna Store. All rights reserved.</span>
       <span>Made with care.</span>
     </div>
   </footer>
@@ -201,7 +210,7 @@
     <div class="cart-foot">
       <div class="cart-total">
         <span>Subtotal</span>
-        <strong id="cartTotal">$0.00</strong>
+        <strong id="cartTotal">₹0</strong>
       </div>
       <button class="btn btn-primary full" id="checkoutBtn">Checkout</button>
     </div>
